@@ -1,8 +1,13 @@
-import { Header } from 'components/header';
 import React from 'react';
+import { Footer } from 'components/footer';
+import { Header } from 'components/header';
+
 
 export const App: React.FC = () => {
   return (
-    <Header/>
+    <div>
+      <Header/>
+      <Footer/>
+    </div>
   );
 };
