@@ -1,0 +1,1 @@
+export { BoxProduct } from "./boxProduct"
