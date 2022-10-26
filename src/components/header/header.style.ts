@@ -9,7 +9,7 @@ export const BoxDiv = styled('div')({
   alignItems: "center"
 });
 export const HeaderDiv = styled('div')({
-  height: 100,
+  height: 80,
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-around",
@@ -25,8 +25,12 @@ export const HeaderDiv = styled('div')({
     marginLeft: 30,
   },
   "& .photoUser": {
-    width: 64,
-    height: 64,
+    width: 60,
+    height: 60,
+  },
+  "& .ImgLogo": {
+    width: 124.28,
+    height: 45.41,
   },
 });
 export const TextHeader = styled(Typography)({
@@ -34,13 +38,6 @@ export const TextHeader = styled(Typography)({
   fontWeight: 600,
   lineHeight: ("19px"),
   color: "#000000",
-});
-export const ImgLogo = styled("image")({
-  width: 144.28,
-  height: 65.41,
-});
-export const ImgUser = styled("image")({
-  
 });
 export const NumberCart = styled(Typography)({
   fontSize: 16,

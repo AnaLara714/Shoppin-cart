@@ -2,15 +2,13 @@ import React from "react";
 import Logo from "assets/imgs/LogoCompleta.svg"; 
 import IconCarrinho from "assets/icons/carrinho.svg";
 import fotoUsuario from "assets/imgs/fotoUsuario.svg";
-import {NumberCart, TextHeader, HeaderDiv, ImgLogo, ImgUser, BoxDiv} from "./header.style"; 
+import {NumberCart, TextHeader, HeaderDiv, BoxDiv} from "./header.style"; 
 
 export const Header: React.FC = () => {
   return (
     <HeaderDiv>
       <BoxDiv>
-        <ImgLogo>
-          <img src={Logo} alt={"Logo"}/>
-        </ImgLogo>
+        <img src={Logo} alt={"Logo"} className="ImgLogo"/>
       </BoxDiv>
       <BoxDiv>
         <BoxDiv className="OptionsHeader">
@@ -25,8 +23,6 @@ export const Header: React.FC = () => {
         />
         <NumberCart>15</NumberCart>
           <img className={"photoUser"} src={fotoUsuario} alt={"foto do usuario"}/>
-        <ImgUser>
-        </ImgUser>
       </BoxDiv>
     </HeaderDiv>
   );

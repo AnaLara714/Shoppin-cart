@@ -12,7 +12,7 @@ export const Router: React.FC = () => {
           element={<LeadingPage/>}
         />
         <Route
-          path={ShoppingCartRoutes.detailsProduct}
+          path={ShoppingCartRoutes.cart}
           element={<CartPage/>}
         />
       </Routes>  

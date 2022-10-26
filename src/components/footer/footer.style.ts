@@ -7,6 +7,9 @@ export const FooterDiv = styled('div')({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  "& .ImgLogo": {
+    width: 124.28,
+    height: 45.41,
+  },
 });
 
-export const ImgLogo = styled('image')({});
