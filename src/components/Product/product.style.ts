@@ -1,7 +1,7 @@
 import * as React from "react";
 import { styled } from "@mui/system";
 
-export const MainDiv = styled('div')({
+export const ProductDiv = styled('div')({
   height: "100%",
   background: "#F6F6F6",
   display: "flex",

@@ -1,14 +1,14 @@
 import React from "react";
 import { BoxProduct } from "components/boxProduct";
-import { MainDiv } from "./main.style";
+import { ProductDiv } from "./product.style";
 
-export const Main: React.FC = () => {
+export const Product: React.FC = () => {
   return (
-    <MainDiv>
+    <ProductDiv>
       <BoxProduct/>
       <BoxProduct/>
       <BoxProduct/>
       <BoxProduct/>
-    </MainDiv>
+    </ProductDiv>
   );
 };

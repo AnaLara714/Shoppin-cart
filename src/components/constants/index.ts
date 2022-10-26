@@ -1,0 +1,1 @@
+export { ShoppingCartRoutes } from './routes';

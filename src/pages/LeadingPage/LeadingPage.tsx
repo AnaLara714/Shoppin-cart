@@ -1,13 +1,13 @@
 import React from 'react';
 import { Footer } from 'components/footer';
 import { Header } from 'components/header';
-import { Main } from 'components/main';
+import { Product } from 'components/Product';
 
-export const App: React.FC = () => {
+export const LeadingPage: React.FC = () => {
   return (
     <div>
       <Header/>
-      <Main/>
+      <Product/>
       <Footer/>
     </div>
   );
