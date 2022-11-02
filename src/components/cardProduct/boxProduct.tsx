@@ -8,7 +8,11 @@ export const BoxProduct: React.FC = () => {
   return (
     <BoxDiv>
       <Img>
-        <img src={ImgProduct} className="ImgProduct"/>
+        <img 
+          src={ImgProduct} 
+          className="ImgProduct" 
+          alt="produto"
+        />
       </Img>
       <Name>
         NOME DO PRODUTO
@@ -23,9 +27,18 @@ export const BoxProduct: React.FC = () => {
         <ColorText>
           Cores
           <InLine className="colorOptions">
-            <img src={BallGreen}/>
-            <img src={BallPurple} className="BallPurple"/>
-            <img src={BallRed}/>
+            <img 
+              src={BallGreen} 
+              alt="ciculo de cor verde"
+            />
+            <img 
+              src={BallPurple} 
+              className="BallPurple"
+              alt="ciculo de cor verde"
+            />
+            <img 
+              src={BallRed}
+              alt="ciculo de cor vermelha"/>
           </InLine>
         </ColorText>
         <AddCart>

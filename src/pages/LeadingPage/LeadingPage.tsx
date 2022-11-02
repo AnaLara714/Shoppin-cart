@@ -1,13 +1,13 @@
 import React from 'react';
 import { Footer } from 'components/footer';
 import { Header } from 'components/header';
-import { Product } from 'components/Product';
+import { Products } from 'components/products';
 
 export const LeadingPage: React.FC = () => {
   return (
     <div>
       <Header/>
-      <Product/>
+      <Products/>
       <Footer/>
     </div>
   );

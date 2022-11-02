@@ -1,8 +1,8 @@
 import React from "react";
-import { BoxProduct } from "components/boxProduct";
-import { ProductDiv } from "./product.style";
+import { BoxProduct } from "components/cardProduct";
+import { ProductDiv } from "./products.style";
 
-export const Product: React.FC = () => {
+export const Products: React.FC = () => {
   return (
     <ProductDiv>
       <BoxProduct/>
