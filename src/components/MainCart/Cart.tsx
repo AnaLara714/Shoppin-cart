@@ -1,15 +1,26 @@
 import React from "react";
 import { ButtonPurchase, CartDiv, InColumn, InLine, PurchaseValue, TextCart, Title, ValueCart} from "./Cart.style";
 import { ProductInCart } from "components/ProductInCart";
+import { ItemCartContext } from "contexts/itemCart";
+
 
 export const Cart: React.FC = () => {
+  const { cart } = React.useContext(ItemCartContext);
+  
   return (
       <CartDiv>
         <Title>Seus pedidos</Title>
         <InColumn>
-          <ProductInCart/>
-          <ProductInCart/>
-          <ProductInCart/>
+          {cart?.map(product => (
+            <ProductInCart
+              key={product.id}
+              id={product.id}
+              title={product.title}
+              image={product.image}
+              price={product.price}
+              count={product.price}
+            />
+          ))}
         </InColumn>
         <InColumn>
           <PurchaseValue>

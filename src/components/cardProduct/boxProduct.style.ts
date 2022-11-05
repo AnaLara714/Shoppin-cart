@@ -3,11 +3,15 @@ import { styled  } from "@mui/system";
 import { Typography } from "@mui/material";
 
 export const BoxDiv = styled('div')({
-  minHeight: 336,
-  width: 259,
+  height: 416,
+  width: 209,
   borderRadius: 5,
   padding: 15,
+  marginBottom: 15,
   background: "#FFFFFF",
+  "& .footerProduct": {
+    marginTop: 14, 
+  },
   "& .colorOptions": {
     marginTop: 5,
     width: 15,
@@ -29,7 +33,7 @@ export const Img = styled("image")({
 }); 
 
 export const Name = styled(Typography)({
-  fontSize: 20,
+  fontSize: 18,
   marginTop: 14,
   fontWeight: 600,
   color: "#000000",
@@ -39,16 +43,16 @@ export const Name = styled(Typography)({
 export const Description = styled(Typography)({
   fontSize: 10,
   fontWeight: 500,
-  marginTop: 24,
-  width: 244,
+  marginTop: 14,
+  width: 200,
   lineHeight: "17px",
   color: "#272727",
 });
 
 export const Price = styled(Typography)({
-  fontSize: 20,
+  fontSize: 14,
   fontWeight: 500,
-  marginTop: 24,
+  marginTop: 14,
   lineHeight: "29px",
   color: "#000000",
 });
@@ -59,7 +63,6 @@ export const InLine = styled('div')({
 });
 
 export const ColorText = styled(Typography)({
-  marginTop: 24,
   fontSize: 14,
   fontWeight: 400,
   color: "#9D9D9D",
@@ -70,10 +73,9 @@ export const AddCart = styled('button')({
   width: 178,
   height: 51,
   padding: 0,
-  marginTop: 24,
   marginLeft: 44,
   borderRadius: 5,
-  fontSize: 12,
+  fontSize: 10,
   fontWeight: 600,
   lineHeight: "19px",
   background: "#89D963",

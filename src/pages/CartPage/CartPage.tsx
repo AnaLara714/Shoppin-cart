@@ -1,4 +1,4 @@
-import { Cart } from 'components/cartg';
+import { Cart } from 'components/MainCart';
 import { Footer } from 'components/footer';
 import { Header } from 'components/header';
 import React from 'react';

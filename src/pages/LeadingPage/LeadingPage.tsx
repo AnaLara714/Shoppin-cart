@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Footer } from 'components/footer';
 import { Header } from 'components/header';
 import { Products } from 'components/products';
@@ -7,7 +7,7 @@ export const LeadingPage: React.FC = () => {
   return (
     <div>
       <Header/>
-      <Products/>
+      <Products />
       <Footer/>
     </div>
   );

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { styled } from "@mui/system";
 import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const BoxDiv = styled('div')({
   display: "flex",
@@ -39,7 +40,7 @@ export const TextHeader = styled(Typography)({
   lineHeight: ("19px"),
   color: "#000000",
 });
-export const NumberCart = styled(Typography)({
+export const NumberCart = styled(Link)({
   fontSize: 16,
   marginRight: 15,
 });

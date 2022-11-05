@@ -8,7 +8,7 @@ export const ProductDiv = styled('div')({
   justifyContent: "space-evenly",
   alignItems: "center",
   flexWrap: "wrap",
-  minWidth: 600,
+  minWidth: 300,
   paddingTop: 77,
   paddingBottom: 94,
 });

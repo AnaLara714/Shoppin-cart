@@ -5,10 +5,13 @@ import IconCarrinho from "assets/icons/carrinho.svg";
 import fotoUsuario from "assets/imgs/fotoUsuario.svg";
 import {NumberCart, TextHeader, HeaderDiv, BoxDiv} from "./header.style"; 
 import { ShoppingCartRoutes } from "components/constants";
+import { ItemCartContext } from "contexts/itemCart";
 
 export const Header: React.FC = () => {
   const navigate = useNavigate();
-
+  const {getItemsQuantity} = React.useContext(ItemCartContext);
+  const itemsQuantity = getItemsQuantity();
+  
   const onHomeButtonClick = () =>  {
     navigate(ShoppingCartRoutes.product);
   };
@@ -28,8 +31,6 @@ export const Header: React.FC = () => {
           >
             INICIO
           </TextHeader>
-          {/* <TextHeader className="product">PRODUTOS</TextHeader>
-          <TextHeader>CONTATO</TextHeader> */}
         </BoxDiv>
         <img 
           src={IconCarrinho} 
@@ -37,8 +38,8 @@ export const Header: React.FC = () => {
           className={"cart"}
           onClick={onCartButtonClick}
         />
-        <NumberCart>15</NumberCart>
-          <img className={"photoUser"} src={fotoUsuario} alt={"foto do usuario"}/>
+        <NumberCart to={ShoppingCartRoutes.cart}>{itemsQuantity}</NumberCart> 
+        <img className={"photoUser"} src={fotoUsuario} alt={"foto do usuario"}/>
       </BoxDiv>
     </HeaderDiv>
   );

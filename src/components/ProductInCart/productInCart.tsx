@@ -1,28 +1,38 @@
 import React from "react";
 import ImgProduct from "assets/imgs/imgProduct.svg";
 import { InColumn, InLine, LessAmount, MoreAmount, Name, Price, Product, Quantity } from "./productInCart.style";
+import { ProductCartInfo } from "service/interfaces";
+import { useNavigate } from "react-router-dom";
 
-export const ProductInCart: React.FC = () => {
+export const ProductInCart: React.FC<ProductCartInfo> = ({
+  id,
+  title,
+  image,
+  price,
+  count,
+}) => {
+  const navigate = useNavigate();
+
   return (
       <div>
           <Product>
             <InLine>
               <InColumn>
               <img 
-                src={ImgProduct} 
+                src={image} 
                 alt={"foto do produto"}
                 className={"imgProduct"}
               />
               </InColumn>
               <InColumn>
-              <Name>NOME DO PRODUTO</Name>
+              <Name>{`${title.slice(0, 30)}...`}</Name>
               <InLine>
-                <Quantity>1 UND. de</Quantity> 
-                <Price className="priceUND">R$256,55</Price>
+                <Quantity>{count} UND. de</Quantity> 
+                <Price className="priceUND">U${price}</Price>
                 <LessAmount>-</LessAmount>
                 <MoreAmount>+</MoreAmount>
               </InLine>
-              <Price>R$566,55</Price>
+              <Price>U${(count*price).toFixed(2)}</Price>
               </InColumn>
             </InLine>
           </Product>

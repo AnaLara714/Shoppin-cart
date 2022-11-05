@@ -4,26 +4,48 @@ import BallRed from "assets/icons/ballRed.svg";
 import BallGreen from "assets/icons/ballGreen.svg";
 import BallPurple from "assets/icons/ballPurple.svg";
 import { AddCart, BoxDiv, ColorText, Description, Img, InLine, Name, Price } from "./boxProduct.style";
-export const BoxProduct: React.FC = () => {
+import { ItemCartContext } from "contexts/itemCart";
+import { useNavigate } from "react-router-dom";
+
+interface ProductInfo {
+  id: number,
+  title: string,
+  description: string,
+  image: string,
+  price: number,
+  count?: number,
+};
+
+export const BoxProduct: React.FC<ProductInfo> = ({id, image, title, description, price, count}) => {
+  const navigate = useNavigate();
+  const { addCart } = React.useContext(ItemCartContext);
+  
+  const onAddCartButtonClick = () => {
+    addCart({
+      id,
+      title,
+      image,
+      price,
+    });
+  };
+  const onProductClick = () => {
+    navigate(`/product/${id}`);
+  };
+  
   return (
-    <BoxDiv>
+    <BoxDiv key={id}>
       <Img>
         <img 
-          src={ImgProduct} 
+          src={image} 
           className="ImgProduct" 
-          alt="produto"
+          alt={title}
+          onClick={onProductClick}
         />
       </Img>
-      <Name>
-        NOME DO PRODUTO
-      </Name>
-      <Description>
-        Descrição do produto, uma breve descrição aqui. Aqui fica uma breve descrição
-      </Description>
-      <Price>
-        R$ 159,00 ou 10x 15,99
-      </Price>
-      <InLine>
+      <Name>{`${title.slice(0, 15)}...`}</Name>
+      <Description>{description.length < 50 ? description : `${description.slice(0, 55)}...`}</Description>
+      <Price>U$ {(price).toFixed(2)}</Price>
+      <InLine className="footerProduct">
         <ColorText>
           Cores
           <InLine className="colorOptions">
@@ -41,7 +63,9 @@ export const BoxProduct: React.FC = () => {
               alt="ciculo de cor vermelha"/>
           </InLine>
         </ColorText>
-        <AddCart>
+        <AddCart
+          onClick={onAddCartButtonClick}
+        >
           Adicionar ao carrinho
         </AddCart>
       </InLine>
