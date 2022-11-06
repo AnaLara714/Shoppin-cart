@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Logo from "assets/imgs/LogoCompleta.svg"; 
 import IconCarrinho from "assets/icons/carrinho.svg";
 import fotoUsuario from "assets/imgs/fotoUsuario.svg";
-import {NumberCart, TextHeader, HeaderDiv, BoxDiv} from "./header.style"; 
+import {NumberCart, TextHeader, HeaderDiv, BoxDiv, CartGo} from "./header.style"; 
 import { ShoppingCartRoutes } from "components/constants";
 import { ItemCartContext } from "contexts/itemCart";
 
@@ -32,14 +32,17 @@ export const Header: React.FC = () => {
             INICIO
           </TextHeader>
         </BoxDiv>
+        <CartGo onClick={onCartButtonClick}>
         <img 
           src={IconCarrinho} 
           alt={"icone do carrinho"} 
           className={"cart"}
-          onClick={onCartButtonClick}
         />
-        <NumberCart to={ShoppingCartRoutes.cart}>{itemsQuantity}</NumberCart> 
+        <NumberCart>
+            {itemsQuantity}
+        </NumberCart> 
         <img className={"photoUser"} src={fotoUsuario} alt={"foto do usuario"}/>
+        </CartGo>
       </BoxDiv>
     </HeaderDiv>
   );

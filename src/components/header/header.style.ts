@@ -22,7 +22,7 @@ export const HeaderDiv = styled('div')({
   "& .cart": {
     height: 32,
     width: 30,
-    marginRight: 7.5,
+    marginRight: 20,
     marginLeft: 30,
   },
   "& .photoUser": {
@@ -34,13 +34,20 @@ export const HeaderDiv = styled('div')({
     height: 45.41,
   },
 });
+export const CartGo = styled(Typography)({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+});
 export const TextHeader = styled(Typography)({
   fontSize: 12,
   fontWeight: 600,
   lineHeight: ("19px"),
   color: "#000000",
 });
-export const NumberCart = styled(Link)({
-  fontSize: 16,
+export const NumberCart = styled(Typography)({
+  fontSize: 18,
+  fontWeight: 600,
+  color: "red",
   marginRight: 15,
 });

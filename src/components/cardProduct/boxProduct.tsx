@@ -13,10 +13,9 @@ interface ProductInfo {
   description: string,
   image: string,
   price: number,
-  count?: number,
 };
 
-export const BoxProduct: React.FC<ProductInfo> = ({id, image, title, description, price, count}) => {
+export const BoxProduct: React.FC<ProductInfo> = ({id, image, title, description, price}) => {
   const navigate = useNavigate();
   const { addCart } = React.useContext(ItemCartContext);
   

@@ -4,13 +4,16 @@ import { LeadingPage } from './pages/LeadingPage/LeadingPage';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { Router } from 'components/router';
+import { ItemCartProvider } from 'contexts/itemCart';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Router/>
+    <ItemCartProvider>
+      <Router/>
+    </ItemCartProvider>
   </React.StrictMode>
 );
 

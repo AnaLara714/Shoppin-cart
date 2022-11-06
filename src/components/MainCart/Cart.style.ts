@@ -14,12 +14,12 @@ export const Title = styled(Typography)({
   marginBottom: 10,
 });
 export const CartDiv = styled('div')({
-  height: "100%",
+  minHeight: 348,
   background: "#F6F6F6",
   display: "flex",
   justifyContent: "center",
   flexWrap: "wrap",
-  paddingTop: 47,
+  paddingTop: 30,
   paddingBottom: 74,
   "& .imgProduct": {
     width: 80,
@@ -53,11 +53,11 @@ export const InColumn  = styled('div')({
 
 export const PurchaseValue = styled('div')({
   width: 320,
-  height: 70,
+  height: 100,
   background: "#FFFFFF",
   borderRadius: 5,
   padding: 15,
-  marginTop: 5,
+  marginTop: 10,
 });
 export const ButtonPurchase = styled('button')({
   width: 350,

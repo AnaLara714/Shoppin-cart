@@ -11,9 +11,26 @@ export const Product = styled('div')({
   borderRadius: 5,
   padding: 10,
   marginRight: 20,
-  marginTop: 5,
+  marginTop: 10,
   "& .priceUND": {
     marginLeft: 5,
+    width: 100,
+  },
+  "& .imgProduct": {
+    marginRight: 10,
+  },
+  "& .LessAmount": {
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  "& .Trash": {
+    marginLeft: 100,
+    width: 20,
+    height: 20,
+    marginTop: 3,
+  },
+  "& .MoreAmount": {
+    marginRight: 15,
   },
 });
 export const InLine = styled('div')({
@@ -39,21 +56,9 @@ export const Quantity = styled(Typography)({
   fontWeight: 500,
   color: "#000000",
 });
-
-export const MoreAmount = styled('button')({
+export const ButtonAmount = styled('button')({
+  position: "relative",
   width: 25,
-  height: 25,
-  border: 0,
-  fontSize: 18,
-  background: "#cc0000",
-  color: "#FFFFFF",
-  borderRadius: 5,
-  fontWeight: 300,
-});
-export const LessAmount = styled('button')({
-  width: 25,
-  marginLeft: 220,
-  marginRight: 10,
   height: 25,
   border: 0,
   borderRadius: 5,
