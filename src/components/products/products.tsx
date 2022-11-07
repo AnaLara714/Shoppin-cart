@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BoxProduct } from "components/cardProduct";
+import { BoxProduct } from "components/boxProduct";
 import { ProductDiv } from "./products.style";
 import { api } from "service/api";
 import { useNavigate } from "react-router-dom";

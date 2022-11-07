@@ -5,10 +5,10 @@ import React from 'react';
 
 export const CartPage: React.FC = () => {
   return (
-    <div>
+    <React.Fragment>
       <Header/>
       <Cart/>
       <Footer/>
-    </div>
+    </React.Fragment>
   )
 }

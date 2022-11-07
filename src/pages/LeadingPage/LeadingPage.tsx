@@ -5,10 +5,10 @@ import { Products } from 'components/products';
 
 export const LeadingPage: React.FC = () => {
   return (
-    <div>
+    <React.Fragment>
       <Header/>
       <Products />
       <Footer/>
-    </div>
+    </React.Fragment>
   );
 };

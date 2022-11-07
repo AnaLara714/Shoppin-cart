@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 import { Typography } from "@mui/material";
 
 export const Title = styled(Typography)({
-  fontSize: 24,
+  fontSize: 26,
   fontWeight: 600,
   color: "#000000",
   display: "flex",
@@ -11,7 +11,7 @@ export const Title = styled(Typography)({
   flexWrap: "wrap",
   flexBasis: "100%",
   justifyContent: "center",
-  marginBottom: 10,
+  marginBottom: 0,
 });
 export const CartDiv = styled('div')({
   minHeight: 348,
@@ -50,7 +50,6 @@ export const InColumn  = styled('div')({
   display: "flex",
   flexDirection: "column",
 });
-
 export const PurchaseValue = styled('div')({
   width: 320,
   height: 100,
@@ -73,7 +72,6 @@ export const TextCart = styled(Typography)({
   fontSize: 14,
   fontWeight: 300,
   display: "flex",
-  
   color: "#1A1A1A",
 });
 export const ValueCart = styled(Typography)({

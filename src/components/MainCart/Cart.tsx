@@ -20,7 +20,7 @@ export const Cart: React.FC = () => {
   return (
       <CartDiv>
         {getTotal() == 0 ? 
-          <Title>Ainda não há pedidos aqui, clique em inicio e boas compras! :)</Title>
+          <Title>Ainda não há pedidos aqui, clique em inicio, e boas compras! :)</Title>
          : <Title>Seus pedidos</Title> }
         <InColumn>
           {cart?.map(product => (
