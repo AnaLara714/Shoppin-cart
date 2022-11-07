@@ -21,12 +21,9 @@ export const ProductDescription: React.FC = () => {
   
   React.useEffect(() => {
     const productID = Number(location.pathname.split("/").reverse()[0]);
-    // console.log(productID);
     const produc = getProduct(productID);
-    // console.log(product?.title)
-    console.log(produc);
-  //   if(!produc) navigate(ShoppingCartRoutes.product);
-  //   setProduct(produc);
+    if(!produc) navigate(ShoppingCartRoutes.product);
+    setProduct(produc);
   }, [getProduct, location, navigate]);
   return (
     <DescriptionDiv>
@@ -40,7 +37,7 @@ export const ProductDescription: React.FC = () => {
       <InColumn>
         <Title>{product?.title}</Title>
         <Description>{product?.description}</Description>
-        <Price>{product?.price}</Price>
+        <Price>U$ {product?.price}</Price>
         <Text>Não perca! Compre AGORA! </Text>
         <AddCart
           onClick={onAddCartButtonClick}

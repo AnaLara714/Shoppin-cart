@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BoxProduct } from "components/boxProduct";
 import { ProductDiv } from "./products.style";
 import { api } from "service/api";
-import { useNavigate } from "react-router-dom";
+import { ItemCartContext } from "contexts/itemCart"
 
 interface ProductInfo {
   id: number,
@@ -14,9 +14,12 @@ interface ProductInfo {
 };
 export const Products: React.FC = () => {
   const [data, setData] = useState<ProductInfo[]>([]);
+  const { setProducts } = React.useContext(ItemCartContext);
+  
   const fecthData = async() => {
     const response = await api.get("/products");
     setData(response.data);
+    setProducts(response.data)
     console.log(response?.data);
   };
 

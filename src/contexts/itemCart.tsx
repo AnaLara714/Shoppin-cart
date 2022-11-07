@@ -1,4 +1,3 @@
-import { Price } from "components/boxProduct/boxProduct.style";
 import React from "react";
 import { ProductCartInfo, ProductInfo } from "service/interfaces";
 
@@ -40,14 +39,8 @@ export const ItemCartProvider: React.FC<ItemCartProviderProps> = ({ children }) 
     });
     setCart(cartList);
   };
-  const getProduct = (id: number) => {
-    products.find(product => product.id === id);
-    console.log(getProduct(products))
-    return;
-  }
-
-  
-    
+  const getProduct = (id: number) => 
+    products.find(product => product.id === id);  
   const getItemsQuantity = () => 
     cart.reduce((total, product) => total + product.count, 0);
   const getTotal = () => 

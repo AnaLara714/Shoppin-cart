@@ -41,9 +41,7 @@ export const Price = styled(Typography)({
   color: "#000000",
 });
 export const AddCart = styled('button')({
-  width: 250,
   height: 51,
-  padding: 0,
   marginTop: 10,
   borderRadius: 5,
   fontSize: 12,
@@ -52,6 +50,9 @@ export const AddCart = styled('button')({
   background: "#89D963",
   border: "none",
   color: "#FFFFFF",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 });
 export const Text = styled(Typography)({
   fontSize: 14,
