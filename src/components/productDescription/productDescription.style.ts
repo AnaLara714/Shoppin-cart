@@ -3,16 +3,17 @@ import { styled } from "@mui/system";
 import { Typography } from "@mui/material";
 
 export const DescriptionDiv = styled('div')({
-  minHeight: 348,
+  minHeight: "100%",
   background: "#F6F6F6",
   display: "flex",
   justifyContent: "center",
   flexWrap: "wrap",
   paddingTop: 30,
-  paddingBottom: 74,
+  paddingBottom: 140,
   "& .imgProduct": {
     height: 250,
     marginRight: 20,
+    marginBottom: 5,
   },
 });
 export const InColumn  = styled('div')({
@@ -22,13 +23,17 @@ export const InColumn  = styled('div')({
 export const Title = styled(Typography)({
   fontSize: 20,
   fontWeight: 600,
+  marginBottom: 15,
   color: "#000000",
   lineHeight: "29px",
+  display: "flex",
+  flexDirection: "row",
+  flexBasis: "100%",
+  justifyContent: "center",
 });
 export const Description = styled(Typography)({
   fontSize: 12,
   fontWeight: 300,
-  marginTop: 20,
   width: 200,
   lineHeight: "17px",
   color: "#272727",
@@ -36,7 +41,7 @@ export const Description = styled(Typography)({
 export const Price = styled(Typography)({
   fontSize: 16,
   fontWeight: 500,
-  marginTop: 30,
+  marginTop: 10,
   lineHeight: "29px",
   color: "#000000",
 });
@@ -57,7 +62,7 @@ export const AddCart = styled('button')({
 export const Text = styled(Typography)({
   fontSize: 14,
   fontWeight: 600,
-  marginTop: 30,
+  marginTop: 10,
   display: "flex",
   justifyContent: "center",
   color: "#1A1A1A",

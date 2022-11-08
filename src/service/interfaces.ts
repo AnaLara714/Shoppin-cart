@@ -4,7 +4,11 @@ export interface ProductInfo {
   description?: string,
   image: string,
   price: number,
-  count?: number,
+  rating?: {
+    count?: number,
+    rate?: number,
+  },
+
 };
 
 export interface ProductCartInfo {

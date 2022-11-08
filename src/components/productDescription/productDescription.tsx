@@ -27,6 +27,7 @@ export const ProductDescription: React.FC = () => {
   }, [getProduct, location, navigate]);
   return (
     <DescriptionDiv>
+      <Title>{product?.title}</Title>
       <InColumn>
         <img
           src={product?.image}
@@ -35,8 +36,8 @@ export const ProductDescription: React.FC = () => {
         />
       </InColumn>
       <InColumn>
-        <Title>{product?.title}</Title>
         <Description>{product?.description}</Description>
+        <Text>Avaliação: {product?.rating?.rate}</Text>
         <Price>U$ {product?.price}</Price>
         <Text>Não perca! Compre AGORA! </Text>
         <AddCart

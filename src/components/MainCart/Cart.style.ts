@@ -14,13 +14,13 @@ export const Title = styled(Typography)({
   marginBottom: 0,
 });
 export const CartDiv = styled('div')({
-  minHeight: 348,
+  minHeight: 350,
   background: "#F6F6F6",
   display: "flex",
   justifyContent: "center",
   flexWrap: "wrap",
   paddingTop: 30,
-  paddingBottom: 74,
+  paddingBottom: 140,
   "& .imgProduct": {
     width: 80,
     height: 80,

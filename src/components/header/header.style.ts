@@ -13,7 +13,7 @@ export const HeaderDiv = styled('div')({
   height: 80,
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-around",
+  justifyContent: "space-between",
   alignItems: "center",
   "& .product": {
     marginRight: 36,
@@ -28,6 +28,7 @@ export const HeaderDiv = styled('div')({
   "& .photoUser": {
     width: 60,
     height: 60,
+    marginRight: 15,
   },
   "& .ImgLogo": {
     width: 124.28,

@@ -10,5 +10,5 @@ export const ProductDiv = styled('div')({
   flexWrap: "wrap",
   minWidth: 300,
   paddingTop: 77,
-  paddingBottom: 94,
+  paddingBottom: 140,
 });
