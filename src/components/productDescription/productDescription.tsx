@@ -4,7 +4,6 @@ import { ItemCartContext } from "contexts/itemCart";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ProductInfo } from "service/interfaces";
 import { Description, DescriptionDiv, InColumn, Title, Price, AddCart, Text } from "./productDescription.style";
-import ImgProduct from "assets/imgs/imgProduct.svg";
 
 export const ProductDescription: React.FC = () => {
   const [product, setProduct] = React.useState<ProductInfo | undefined >(

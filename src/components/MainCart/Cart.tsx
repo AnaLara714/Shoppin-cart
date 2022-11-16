@@ -6,16 +6,10 @@ import { ItemCartContext } from "contexts/itemCart";
 
 export const Cart: React.FC = () => {
   const { cart, getTotal } = React.useContext(ItemCartContext);
-  const discount = () => {
-    if (getTotal() != 0) 
-      return ((getTotal()/100)*5);
-    return 0;
-  }
-  const totalValue = () => {
-    if (getTotal() != 0) 
-      return getTotal() - discount();
-    return 0;
-  };
+  const discount = () => 
+    getTotal() !== 0 ? ((getTotal()/100)*5) : 0;
+  const totalValue = () => 
+    getTotal() !== 0 ? getTotal() - discount(): 0;
   
   return (
       <CartDiv>

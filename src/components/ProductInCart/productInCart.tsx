@@ -15,18 +15,14 @@ export const ProductInCart: React.FC<ProductCartInfo> = ({
   const navigate = useNavigate();
   const {decrementCountCart, incrementCountCart, removeItemCart} = React.useContext(ItemCartContext);
 
-  const onProductItemClick = () => {
+  const onProductItemClick = () => 
     navigate(`/product/${id}`);
-  };
-  const onLessButtonClick = () => {
+  const onLessButtonClick = () => 
     decrementCountCart(id);
-  };
-  const onMoreButtonClick = () => {
+  const onMoreButtonClick = () => 
     incrementCountCart(id);
-  };
-  const onRemoveButtonClick = () => {
+  const onRemoveButtonClick = () => 
     removeItemCart(id);
-  };
 
   return (
       <div>
