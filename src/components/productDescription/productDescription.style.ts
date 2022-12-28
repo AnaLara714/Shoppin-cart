@@ -58,6 +58,7 @@ export const AddCart = styled('button')({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  cursor: "pointer",
 });
 export const Text = styled(Typography)({
   fontSize: 14,

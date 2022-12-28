@@ -81,4 +81,5 @@ export const AddCart = styled('button')({
   background: "#89D963",
   border: "none",
   color: "#FFFFFF",
+  cursor: "pointer",
 });
