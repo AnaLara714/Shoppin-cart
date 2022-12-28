@@ -7,7 +7,10 @@ export const BoxDiv = styled('div')({
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-around",
-  alignItems: "center"
+  alignItems: "center",
+  "& .OptionsHeader": {
+    cursor: "pointer",
+  },
 });
 export const HeaderDiv = styled('div')({
   height: 80,
@@ -20,7 +23,7 @@ export const HeaderDiv = styled('div')({
     marginLeft: 36,
   },
   "& .cart": {
-    height: 32,
+    height: 32, 
     width: 30,
     marginRight: 20,
     marginLeft: 30,

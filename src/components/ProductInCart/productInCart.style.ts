@@ -18,19 +18,23 @@ export const Product = styled('div')({
   },
   "& .imgProduct": {
     marginRight: 10,
+    cursor: "pointer",
   },
   "& .LessAmount": {
     marginLeft: 10,
     marginRight: 10,
+    cursor: "pointer",
   },
   "& .Trash": {
     marginLeft: 100,
     width: 20,
     height: 20,
     marginTop: 3,
+    cursor: "pointer",
   },
   "& .MoreAmount": {
     marginRight: 15,
+    cursor: "pointer",
   },
 });
 export const InLine = styled('div')({

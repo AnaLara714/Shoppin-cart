@@ -26,6 +26,7 @@ export const BoxProduct: React.FC<ProductInfo> = ({id, image, title, description
       image,
       price,
     });
+    alert("Produto adicionado ao carrinho!");
   };
   const onProductClick = () => {
     navigate(`/product/${id}`);
